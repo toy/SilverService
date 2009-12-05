@@ -39,14 +39,8 @@
 																 @"    ~/Library/Services/SilverService.service )",
 																 @"OK", nil, nil);
 
-		NSString *cpath = [@"~/Library/" stringByExpandingTildeInPath];
-		NSEnumerator *enumerator = [[NSArray arrayWithObjects:@"/Services", @"/SilverService.service", @"/Contents", nil] objectEnumerator];
-		NSString *pathcomp;
-
-		while (pathcomp = [enumerator nextObject]) {
-			cpath = [cpath stringByAppendingString:pathcomp];
-			[fm createDirectoryAtPath:cpath attributes:nil];
-		};
+		NSString *cpath = [@"~/Library/Services/SilverService.service/Contents" stringByExpandingTildeInPath];
+		[fm createDirectoryAtPath:cpath withIntermediateDirectories:YES attributes:nil error:nil];
 		services = [[NSMutableDictionary alloc] init];
 	} else {
 		NSData *plistData;
@@ -59,7 +53,6 @@
 																													format:&format
 																								errorDescription:&error];
 		if (!plist) {
-			NSLog(error);
 			[error release];
 		} else {
 			services = [[NSMutableDictionary alloc] init];
@@ -118,7 +111,6 @@
 		[xmlData writeToFile:plistPath atomically:YES];
 		NSUpdateDynamicServices();
 	} else {
-		NSLog(error);
 		[error release];
 	}
 }
