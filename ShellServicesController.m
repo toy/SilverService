@@ -73,7 +73,7 @@
 }
 
 - (IBAction)newService:(id)sender {
-	NSMutableDictionary *newService = [@"{name=\"New Service\"; in=stdin; out=service; command=\"\";}" propertyList];
+	NSMutableDictionary *newService = [@"{name=\"New Service\"; in=stdin; out=service; command=\"echo 'Hello world!'\";}" propertyList];
 	[[bundle servicesOfType:@"shellService"] addObject:newService];
 	[theTable setNeedsDisplay:YES];
 	[bundle updateOnDisk];
