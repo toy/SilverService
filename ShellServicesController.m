@@ -75,7 +75,8 @@
 - (IBAction)newService:(id)sender {
 	NSMutableDictionary *newService = [@"{name=\"New Service\"; in=stdin; out=service; command=\"echo 'Hello world!'\";}" propertyList];
 	[[bundle servicesOfType:@"shellService"] addObject:newService];
-	[theTable setNeedsDisplay:YES];
+	[theTable reloadData];
+	[theTable editColumn:0 row:[[bundle servicesOfType:@"shellService"] count] - 1 withEvent:nil select:YES];
 	[bundle updateOnDisk];
 }
 
@@ -83,7 +84,7 @@
 	int index = [theTable selectedRow];
 	if (index != -1) {
 		[[bundle servicesOfType:@"shellService"] removeObjectAtIndex:index];
-		[theTable setNeedsDisplay:YES];
+		[theTable reloadData];
 		[bundle updateOnDisk];
 	}
 }
