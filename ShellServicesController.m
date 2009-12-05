@@ -25,44 +25,44 @@
 
 - (void) awakeFromNib
 {
-    inputTypes = [[NSArray arrayWithObjects: @"none", @"stdin", @"string", nil] retain];
-    outputTypes = [[NSArray arrayWithObjects: @"none", @"panel", @"service", nil] retain];
+	inputTypes = [[NSArray arrayWithObjects: @"none", @"stdin", @"string", nil] retain];
+	outputTypes = [[NSArray arrayWithObjects: @"none", @"panel", @"service", nil] retain];
 
-    /* Input Cell */
-    NSPopUpButtonCell *popupButtonCell;
-    popupButtonCell = [[[NSPopUpButtonCell alloc] initTextCell: @""
-                                                     pullsDown: NO] autorelease];
-    [popupButtonCell setEditable:NO];
-    [popupButtonCell setBordered:NO];
-    [popupButtonCell addItemsWithTitles: inputTypes];
-    [[theTable tableColumnWithIdentifier:@"in"] setDataCell:popupButtonCell];
+	/* Input Cell */
+	NSPopUpButtonCell *popupButtonCell;
+	popupButtonCell = [[[NSPopUpButtonCell alloc] initTextCell: @""
+																									 pullsDown: NO] autorelease];
+	[popupButtonCell setEditable:NO];
+	[popupButtonCell setBordered:NO];
+	[popupButtonCell addItemsWithTitles: inputTypes];
+	[[theTable tableColumnWithIdentifier:@"in"] setDataCell:popupButtonCell];
 
-    /* Output Cell */
-    popupButtonCell = [[[NSPopUpButtonCell alloc] initTextCell: @""
-                                                     pullsDown: NO] autorelease];
-    [popupButtonCell setEditable:NO];
-    [popupButtonCell setBordered:NO];
-    [popupButtonCell addItemsWithTitles: outputTypes];
-    [[theTable tableColumnWithIdentifier:@"out"] setDataCell:popupButtonCell];
+	/* Output Cell */
+	popupButtonCell = [[[NSPopUpButtonCell alloc] initTextCell: @""
+																									 pullsDown: NO] autorelease];
+	[popupButtonCell setEditable:NO];
+	[popupButtonCell setBordered:NO];
+	[popupButtonCell addItemsWithTitles: outputTypes];
+	[[theTable tableColumnWithIdentifier:@"out"] setDataCell:popupButtonCell];
 }
 
 - (id)          tableView:(NSTableView *)aTableView
 objectValueForTableColumn:(NSTableColumn *)tableColumn
                       row:(int)rowIndex
 {
-    NSDictionary *service =
-    [[bundle servicesOfType: @"shellService"] objectAtIndex: rowIndex];
-    NSString *value = [service objectForKey: [tableColumn identifier]];
-    if ([[tableColumn identifier] isEqualToString:@"in"])
-        return [NSNumber numberWithInt:[inputTypes indexOfObject: value]];
-    if ([[tableColumn identifier] isEqualToString:@"out"])
-        return [NSNumber numberWithInt:[outputTypes indexOfObject: value]];
-    return value;
+	NSDictionary *service =
+	[[bundle servicesOfType: @"shellService"] objectAtIndex: rowIndex];
+	NSString *value = [service objectForKey: [tableColumn identifier]];
+	if ([[tableColumn identifier] isEqualToString:@"in"])
+		return [NSNumber numberWithInt:[inputTypes indexOfObject: value]];
+	if ([[tableColumn identifier] isEqualToString:@"out"])
+		return [NSNumber numberWithInt:[outputTypes indexOfObject: value]];
+	return value;
 }
 
 - (int)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-    return [[bundle servicesOfType: @"shellService"] count];
+	return [[bundle servicesOfType: @"shellService"] count];
 }
 
 -(void)             tableView:(NSTableView *)tableView
@@ -70,36 +70,36 @@ objectValueForTableColumn:(NSTableColumn *)tableColumn
                forTableColumn:(NSTableColumn *)tableColumn
                           row:(int)row
 {
-    NSMutableDictionary *service =
-        [[bundle servicesOfType: @"shellService"] objectAtIndex: row];
-    NSString *value;
-    if ([[tableColumn identifier] isEqualToString:@"in"])
-        value = [inputTypes objectAtIndex: [object intValue]];
-    else if ([[tableColumn identifier] isEqualToString:@"out"])
-        value = [outputTypes objectAtIndex: [object intValue]];
-    else
-        value = object;
-    [service setObject: value forKey: [tableColumn identifier]];
-    [bundle updateOnDisk];
+	NSMutableDictionary *service =
+	[[bundle servicesOfType: @"shellService"] objectAtIndex: row];
+	NSString *value;
+	if ([[tableColumn identifier] isEqualToString:@"in"])
+		value = [inputTypes objectAtIndex: [object intValue]];
+	else if ([[tableColumn identifier] isEqualToString:@"out"])
+		value = [outputTypes objectAtIndex: [object intValue]];
+	else
+		value = object;
+	[service setObject: value forKey: [tableColumn identifier]];
+	[bundle updateOnDisk];
 }
 
 -(IBAction)newService:(id)sender
 {
-    NSMutableDictionary *newService =
-    [@"{name=\"New Service\"; in=stdin; out=service; command=\"\";}" propertyList];
-    [[bundle servicesOfType: @"shellService"] addObject: newService];
-    [theTable setNeedsDisplay: YES];
-    [bundle updateOnDisk];
+	NSMutableDictionary *newService =
+	[@"{name=\"New Service\"; in=stdin; out=service; command=\"\";}" propertyList];
+	[[bundle servicesOfType: @"shellService"] addObject: newService];
+	[theTable setNeedsDisplay: YES];
+	[bundle updateOnDisk];
 }
 
 -(IBAction)deleteService:(id)sender
 {
-    int index = [theTable selectedRow];
-    if (index != -1)
-    {
-        [[bundle servicesOfType: @"shellService"] removeObjectAtIndex: index];
-        [theTable setNeedsDisplay: YES];
-        [bundle updateOnDisk]; 
-    }
+	int index = [theTable selectedRow];
+	if (index != -1)
+	{
+		[[bundle servicesOfType: @"shellService"] removeObjectAtIndex: index];
+		[theTable setNeedsDisplay: YES];
+		[bundle updateOnDisk];
+	}
 }
 @end

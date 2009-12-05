@@ -22,8 +22,8 @@
 
 @interface ServicesBundle : NSObject
 {
-    NSString *plistPath;
-    NSMutableDictionary *services;
+	NSString *plistPath;
+	NSMutableDictionary *services;
 }
 
 -(void)awakeFromNib;

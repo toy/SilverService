@@ -22,9 +22,9 @@
 #import "ServicesBundle.h"
 
 @interface ShellServicesController : NSObject {
-    IBOutlet ServicesBundle *bundle;
-    IBOutlet NSTableView *theTable;
-    NSArray *inputTypes, *outputTypes;
+	IBOutlet ServicesBundle *bundle;
+	IBOutlet NSTableView *theTable;
+	NSArray *inputTypes, *outputTypes;
 }
 
 -(void)awakeFromNib;
