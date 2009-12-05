@@ -32,7 +32,7 @@
     NSPopUpButtonCell *popupButtonCell;
     popupButtonCell = [[[NSPopUpButtonCell alloc] initTextCell: @""
                                                      pullsDown: NO] autorelease];
-    [popupButtonCell setEditable:YES];
+    [popupButtonCell setEditable:NO];
     [popupButtonCell setBordered:NO];
     [popupButtonCell addItemsWithTitles: inputTypes];
     [[theTable tableColumnWithIdentifier:@"in"] setDataCell:popupButtonCell];
@@ -40,7 +40,7 @@
     /* Output Cell */
     popupButtonCell = [[[NSPopUpButtonCell alloc] initTextCell: @""
                                                      pullsDown: NO] autorelease];
-    [popupButtonCell setEditable:YES];
+    [popupButtonCell setEditable:NO];
     [popupButtonCell setBordered:NO];
     [popupButtonCell addItemsWithTitles: outputTypes];
     [[theTable tableColumnWithIdentifier:@"out"] setDataCell:popupButtonCell];
