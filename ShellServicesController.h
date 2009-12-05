@@ -24,7 +24,9 @@
 @interface ShellServicesController : NSObject {
 	IBOutlet ServicesBundle *bundle;
 	IBOutlet NSTableView *theTable;
+	IBOutlet NSMenu *theMenu;
 	NSArray *inputTypes, *outputTypes;
+	NSStatusItem *theItem;
 }
 
 - (void)awakeFromNib;

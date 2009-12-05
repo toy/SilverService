@@ -40,6 +40,14 @@
 	[popupButtonCell setBordered:NO];
 	[popupButtonCell addItemsWithTitles:outputTypes];
 	[[theTable tableColumnWithIdentifier:@"out"] setDataCell:popupButtonCell];
+
+	NSStatusBar *bar = [NSStatusBar systemStatusBar];
+	theItem = [bar statusItemWithLength:NSVariableStatusItemLength];
+
+	[theItem retain];
+	[theItem setImage:[[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SilverService" ofType:@"png"]]];
+	[theItem setHighlightMode:YES];
+	[theItem setMenu:(NSMenu *)theMenu];
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(int)rowIndex {
