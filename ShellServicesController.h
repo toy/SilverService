@@ -27,15 +27,10 @@
 	NSArray *inputTypes, *outputTypes;
 }
 
--(void)awakeFromNib;
--(int)numberOfRowsInTableView:(NSTableView *)tableView;
--(id)               tableView:(NSTableView *)tableView
-    objectValueForTableColumn:(NSTableColumn *)tableColumn
-                          row:(int)row;
--(void)             tableView:(NSTableView *)tableView
-               setObjectValue:(id)object
-               forTableColumn:(NSTableColumn *)tableColumn
-                          row:(int)row;
--(IBAction)newService:(id)sender;
--(IBAction)deleteService:(id)sender;
+- (void)awakeFromNib;
+- (int)numberOfRowsInTableView:(NSTableView *)tableView;
+- (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(int)row;
+- (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(int)row;
+- (IBAction)newService:(id)sender;
+- (IBAction)deleteService:(id)sender;
 @end

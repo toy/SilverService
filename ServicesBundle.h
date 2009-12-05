@@ -20,13 +20,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ServicesBundle : NSObject
-{
+@interface ServicesBundle : NSObject {
 	NSString *plistPath;
 	NSMutableDictionary *services;
 }
 
--(void)awakeFromNib;
--(void)updateOnDisk;
--(NSMutableArray *)servicesOfType:(NSString*)type;
+- (void)awakeFromNib;
+- (void)updateOnDisk;
+- (NSMutableArray *)servicesOfType:(NSString*)type;
 @end

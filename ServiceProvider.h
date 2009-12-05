@@ -20,14 +20,10 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface ServiceProvider : NSResponder {
 }
 
-
 - (IBAction)refresh:(id)sender;
-- (void)shellService:(NSPasteboard *)pboard
-            userData:(NSString *)userData error:(NSString **)error;
+- (void)shellService:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
-
 @end
