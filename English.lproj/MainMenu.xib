@@ -478,7 +478,7 @@
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="276289521">
 									<reference key="NSMenu" ref="921018002"/>
-									<string key="NSTitle">NewApplication Help</string>
+									<string key="NSTitle">SilverService Help</string>
 									<string key="NSKeyEquiv">?</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
