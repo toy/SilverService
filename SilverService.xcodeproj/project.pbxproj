@@ -15,6 +15,7 @@
 		B25A603E10CA453F00094F5C /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A603510CA453E00094F5C /* ServiceProvider.m */; };
 		B25A603F10CA453F00094F5C /* ServicesBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A603710CA453E00094F5C /* ServicesBundle.m */; };
 		B25A604010CA453F00094F5C /* ShellServicesController.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A603910CA453E00094F5C /* ShellServicesController.m */; };
+		B2EB517410CA706400027F20 /* SilverService.icns in Resources */ = {isa = PBXBuildFile; fileRef = B2EB517310CA706400027F20 /* SilverService.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B25A603710CA453E00094F5C /* ServicesBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServicesBundle.m; sourceTree = "<group>"; };
 		B25A603810CA453E00094F5C /* ShellServicesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellServicesController.h; sourceTree = "<group>"; };
 		B25A603910CA453E00094F5C /* ShellServicesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellServicesController.m; sourceTree = "<group>"; };
+		B2EB517310CA706400027F20 /* SilverService.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = SilverService.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B2EB517310CA706400027F20 /* SilverService.icns */,
 				8D1107310486CEB800E47090 /* SilverService-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -175,6 +178,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				B25A603D10CA453F00094F5C /* ReadMe.rtfd in Resources */,
+				B2EB517410CA706400027F20 /* SilverService.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
