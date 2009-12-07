@@ -1,3 +1,5 @@
 output to clipboard
 checkboxes to show menu bar icon and dock icon
 checkbox to launch on startup
+hot key
+rethink stdio stdout selectors
