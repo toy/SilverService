@@ -41,9 +41,9 @@
 	[popupButtonCell addItemsWithTitles:outputTypes];
 	[[theTable tableColumnWithIdentifier:@"out"] setDataCell:popupButtonCell];
 
+	/* Status bar icon */
 	NSStatusBar *bar = [NSStatusBar systemStatusBar];
 	theItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-
 	[theItem retain];
 	[theItem setImage:[[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SilverService" ofType:@"png"]]];
 	[theItem setHighlightMode:YES];
