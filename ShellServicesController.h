@@ -20,6 +20,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ServicesBundle.h"
+#import "ShortcutFormatter.h"
 
 @interface ShellServicesController : NSObject {
 	IBOutlet ServicesBundle *bundle;

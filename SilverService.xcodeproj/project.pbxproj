@@ -11,6 +11,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		B253BC3310CE77EF00D0C93E /* ShortcutFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B253BC3210CE77EF00D0C93E /* ShortcutFormatter.m */; };
 		B25A603D10CA453F00094F5C /* ReadMe.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = B25A603310CA453E00094F5C /* ReadMe.rtfd */; };
 		B25A603E10CA453F00094F5C /* ServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A603510CA453E00094F5C /* ServiceProvider.m */; };
 		B25A603F10CA453F00094F5C /* ServicesBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = B25A603710CA453E00094F5C /* ServicesBundle.m */; };
@@ -30,6 +31,8 @@
 		8D1107310486CEB800E47090 /* SilverService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SilverService-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SilverService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SilverService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2097BF010CA493F00674299 /* SilverService_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SilverService_Prefix.pch; sourceTree = "<group>"; };
+		B253BC3110CE77EF00D0C93E /* ShortcutFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutFormatter.h; sourceTree = "<group>"; };
+		B253BC3210CE77EF00D0C93E /* ShortcutFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShortcutFormatter.m; sourceTree = "<group>"; };
 		B25A603310CA453E00094F5C /* ReadMe.rtfd */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; path = ReadMe.rtfd; sourceTree = "<group>"; };
 		B25A603410CA453E00094F5C /* ServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceProvider.h; sourceTree = "<group>"; };
 		B25A603510CA453E00094F5C /* ServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceProvider.m; sourceTree = "<group>"; };
@@ -56,6 +59,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B253BC3110CE77EF00D0C93E /* ShortcutFormatter.h */,
+				B253BC3210CE77EF00D0C93E /* ShortcutFormatter.m */,
 				B25A603410CA453E00094F5C /* ServiceProvider.h */,
 				B25A603510CA453E00094F5C /* ServiceProvider.m */,
 				B25A603610CA453E00094F5C /* ServicesBundle.h */,
@@ -197,6 +202,7 @@
 				B25A603E10CA453F00094F5C /* ServiceProvider.m in Sources */,
 				B25A603F10CA453F00094F5C /* ServicesBundle.m in Sources */,
 				B25A604010CA453F00094F5C /* ShellServicesController.m in Sources */,
+				B253BC3310CE77EF00D0C93E /* ShortcutFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,6 +41,15 @@
 	[popupButtonCell addItemsWithTitles:outputTypes];
 	[[theTable tableColumnWithIdentifier:@"out"] setDataCell:popupButtonCell];
 
+	/* Shortcut Cell */
+	NSTextFieldCell *textFieldCell;
+	textFieldCell = [[[NSTextFieldCell alloc] initTextCell:@""] autorelease];
+	[textFieldCell setPlaceholderString:@"⌘+"];
+	[textFieldCell setEditable:YES];
+	[textFieldCell setBordered:NO];
+	[textFieldCell setFormatter:[[ShortcutFormatter alloc] init]];
+	[[theTable tableColumnWithIdentifier:@"shortcut"] setDataCell:textFieldCell];
+
 	/* Status bar icon */
 	NSStatusBar *bar = [NSStatusBar systemStatusBar];
 	theItem = [bar statusItemWithLength:NSVariableStatusItemLength];

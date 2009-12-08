@@ -99,6 +99,13 @@
 			if ([[service objectForKey:@"out"] isEqualToString:@"service"]) {
 				[serviceSpec setObject:[NSArray arrayWithObject:@"NSStringPboardType"] forKey:@"NSReturnTypes"];
 			}
+			if ([[service objectForKey:@"shortcut"] length] > 0) {
+				[serviceSpec setObject:
+					[NSDictionary dictionaryWithObject:
+						[service objectForKey:@"shortcut"]
+																		forKey:@"default"]
+																		forKey:@"NSKeyEquivalent"];
+			}
 
 			[serviceSpec setObject:[service description] forKey:@"NSUserData"];
 

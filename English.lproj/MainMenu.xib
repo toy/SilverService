@@ -11,9 +11,9 @@
 			<string key="NS.object.0">732</string>
 		</object>
 		<array class="NSMutableArray" key="IBDocument.EditedObjectIDs">
-			<integer value="336"/>
 			<integer value="57"/>
-			<integer value="256"/>
+			<integer value="336"/>
+			<integer value="344"/>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -541,7 +541,7 @@
 											<array class="NSMutableArray" key="NSTableColumns">
 												<object class="NSTableColumn" id="1009915909">
 													<string key="NSIdentifier">name</string>
-													<double key="NSWidth">174</double>
+													<double key="NSWidth">132</double>
 													<double key="NSMinWidth">40</double>
 													<double key="NSMaxWidth">1000</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -595,7 +595,7 @@
 												</object>
 												<object class="NSTableColumn" id="257808493">
 													<string key="NSIdentifier">command</string>
-													<double key="NSWidth">193.62300109863281</double>
+													<double key="NSWidth">152.62300109863281</double>
 													<double key="NSMinWidth">90.623001098632812</double>
 													<double key="NSMaxWidth">1000</double>
 													<object class="NSTableHeaderCell" key="NSHeaderCell">
@@ -689,6 +689,32 @@
 													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="122452545"/>
 												</object>
+												<object class="NSTableColumn" id="463626282">
+													<string key="NSIdentifier">shortcut</string>
+													<double key="NSWidth">80</double>
+													<double key="NSMinWidth">37.236000061035156</double>
+													<double key="NSMaxWidth">1000</double>
+													<object class="NSTableHeaderCell" key="NSHeaderCell">
+														<int key="NSCellFlags">75628096</int>
+														<int key="NSCellFlags2">2048</int>
+														<string key="NSContents">Shortcut</string>
+														<reference key="NSSupport" ref="1012445164"/>
+														<reference key="NSBackgroundColor" ref="643055512"/>
+														<reference key="NSTextColor" ref="273446205"/>
+													</object>
+													<object class="NSTextFieldCell" key="NSDataCell" id="420917605">
+														<int key="NSCellFlags">338820672</int>
+														<int key="NSCellFlags2">1024</int>
+														<string key="NSContents">Redwood City</string>
+														<reference key="NSSupport" ref="597225244"/>
+														<reference key="NSControlView" ref="122452545"/>
+														<bool key="NSDrawsBackground">YES</bool>
+														<reference key="NSBackgroundColor" ref="564001359"/>
+														<reference key="NSTextColor" ref="384335968"/>
+													</object>
+													<bool key="NSIsEditable">YES</bool>
+													<reference key="NSTableView" ref="122452545"/>
+												</object>
 											</array>
 											<double key="NSIntercellSpacingWidth">3</double>
 											<double key="NSIntercellSpacingHeight">2</double>
@@ -722,17 +748,18 @@
 									<reference key="NSSuperview" ref="14202071"/>
 									<reference key="NSTarget" ref="14202071"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">0.5736842155456543</double>
+									<double key="NSPercent">0.9427480916030534</double>
 								</object>
 								<object class="NSScroller" id="661374409">
 									<reference key="NSNextResponder" ref="14202071"/>
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{1, 264}, {525, 15}}</string>
 									<reference key="NSSuperview" ref="14202071"/>
+									<bool key="NSEnabled">YES</bool>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="14202071"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">0.96141481399536133</double>
+									<double key="NSPercent">0.8667736757624398</double>
 								</object>
 								<object class="NSClipView" id="72388579">
 									<reference key="NSNextResponder" ref="14202071"/>
@@ -752,7 +779,7 @@
 							<string key="NSFrame">{{20, 60}, {542, 280}}</string>
 							<reference key="NSSuperview" ref="634023929"/>
 							<reference key="NSNextKeyView" ref="421795304"/>
-							<int key="NSsFlags">562</int>
+							<int key="NSsFlags">690</int>
 							<reference key="NSVScroller" ref="575045635"/>
 							<reference key="NSHScroller" ref="661374409"/>
 							<reference key="NSContentView" ref="421795304"/>
@@ -1537,6 +1564,7 @@
 							<reference ref="1009915909"/>
 							<reference ref="739972247"/>
 							<reference ref="509209193"/>
+							<reference ref="463626282"/>
 						</array>
 						<reference key="parent" ref="14202071"/>
 					</object>
@@ -1658,6 +1686,19 @@
 						<reference key="object" ref="181567522"/>
 						<reference key="parent" ref="378204176"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">344</int>
+						<reference key="object" ref="463626282"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="420917605"/>
+						</array>
+						<reference key="parent" ref="122452545"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">345</int>
+						<reference key="object" ref="420917605"/>
+						<reference key="parent" ref="463626282"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1753,9 +1794,9 @@
 				<boolean value="YES" key="241.ImportedFromIB2"/>
 				<string key="242.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="242.ImportedFromIB2"/>
-				<string key="255.IBEditorWindowLastContentRect">{{-56, -182}, {582, 360}}</string>
+				<string key="255.IBEditorWindowLastContentRect">{{0, 0}, {582, 360}}</string>
 				<string key="255.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="255.IBWindowTemplateEditedContentRect">{{-56, -182}, {582, 360}}</string>
+				<string key="255.IBWindowTemplateEditedContentRect">{{0, 0}, {582, 360}}</string>
 				<boolean value="YES" key="255.ImportedFromIB2"/>
 				<boolean value="YES" key="255.windowTemplate.hasMinSize"/>
 				<string key="255.windowTemplate.minSize">{213, 107}</string>
@@ -1779,7 +1820,7 @@
 				<boolean value="YES" key="285.ImportedFromIB2"/>
 				<string key="287.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="287.ImportedFromIB2"/>
-				<string key="29.IBEditorWindowLastContentRect">{{430, 828}, {298, 20}}</string>
+				<string key="29.IBEditorWindowLastContentRect">{{372, 828}, {298, 20}}</string>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="29.ImportedFromIB2"/>
 				<string key="291.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1806,11 +1847,15 @@
 				<boolean value="YES" key="338.ImportedFromIB2"/>
 				<string key="339.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="339.ImportedFromIB2"/>
+				<string key="344.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="YES" key="344.ImportedFromIB2"/>
+				<string key="345.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<boolean value="YES" key="345.IBShouldRemoveOnLegacySave"/>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="5.ImportedFromIB2"/>
 				<string key="56.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="56.ImportedFromIB2"/>
-				<string key="57.IBEditorWindowLastContentRect">{{442, 625}, {220, 203}}</string>
+				<string key="57.IBEditorWindowLastContentRect">{{384, 625}, {220, 203}}</string>
 				<string key="57.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="YES" key="57.ImportedFromIB2"/>
 				<string key="58.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1822,7 +1867,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">343</int>
+			<int key="maxID">345</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
