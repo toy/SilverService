@@ -1,6 +1,5 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleName = "SilverService";
-CFBundleShortVersionString = "SilverService version 0.1";
-CFBundleGetInfoString = "SilverService version 0.1, Copyright 2004 Rob Hague.";
+CFBundleGetInfoString = "SilverService, Copyright 2004 Rob Hague.";
 NSHumanReadableCopyright = "Copyright 2004 Rob Hague.";
